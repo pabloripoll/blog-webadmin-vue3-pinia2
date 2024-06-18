@@ -4,7 +4,7 @@
     </a>
 </div>
 
-# Blog Example - Web Application
+# Blog Admin Example - Web Application
 
 **(IN DEVELOPMENT)**
 
