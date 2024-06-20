@@ -8,7 +8,7 @@ import App from '@/App.vue'
 
 import Axios from '@/plugin/axios'
 
-import Router from '@/router'
+import Router from '@/router.js'
 
 // Create App
 

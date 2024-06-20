@@ -158,30 +158,47 @@ export default {
                 return
 
             } else {
+                console.log(import.meta.env.VITE_API_V1 + '/v1/auth/login')
 
-                await this.axios.post('/auth/login', this.form, {"Content-Type": "application/json"})
+                await this.axios.get('https://serialify-api.pabloripoll.com/api/v1/check', {"Content-Type": "application/json"})
+                /* .then((response) => {
+                    return response.json()
+                }) */
+                .then(response => {
+                    console.log(response)
+                })
+                .catch(error => {
+                    console.log(error.response.data.message)
+                    this.loginStatus({status:'danger', message:'connection error', icon:'fas fa-wifi'})
+                })
+
+                /* await this.axios.post('/v1/auth/login', this.form, {
+                    'Access-Control-Allow-Origin': '*',
+                    "Content-Type": "application/json"
+                })
                 .then(response => {
                     let data = response.data
-                    //console.log(data)
+                    console.log(data) */
 
                     /* this.userStore.setToken(response.data)
                     this.userStore.setUserInfo(response.data)
                     this.userStore.initStore(response.data) */
-                    localStorage.setItem('user.id', data.id)
+                    /* localStorage.setItem('user.id', data.id)
                     localStorage.setItem('user.name', data.name)
                     localStorage.setItem('user.surname', data.surname)
                     localStorage.setItem('user.email', data.email)
                     localStorage.setItem('user.role', data.role)
                     localStorage.setItem('user.token', data.token)
-                    localStorage.setItem('isAuthenticated', 1)
+                    localStorage.setItem('isAuthenticated', 1) */
+
                     //axios.defaults.headers.common["Authorization"] = `Bearer ${response.token}`;
 
-                    location.href = '/'
+                    //location.href = '/'
                     //this.$router.push('/')
-                })
+                /* })
                 .catch(error => {
                     this.loginStatus({status:'danger', message:'connection error', icon:'fas fa-wifi'})
-                })
+                }) */
 
                 /* await axios.get('/api/me/')
                 .then(response => {

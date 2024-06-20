@@ -5,9 +5,9 @@ import { layoutMiddleware } from '@/middleware/layoutMiddleware'
 import { useUserStore } from '@/stores/user'
 
 const routes = [
-    { path: '/', redirect: '/account/profile' },
+    /* { path: '/', redirect: '/account/profile' },
     { path: '/account/profile', component: () => import('./views/admin/AccountProfile.vue') },
-    { path: '/account/setting', component: () => import('./views/admin/AccountSetting.vue') },
+    { path: '/account/setting', component: () => import('./views/admin/AccountSetting.vue') }, */
 
     /*
     { path: '/blog/posts', component: () => import('./views/admin/BlogPosts.vue') },

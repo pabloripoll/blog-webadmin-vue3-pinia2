@@ -8,7 +8,7 @@
  * */
 
 export async function layoutMiddleware(route) {
-
+    console.log(route.meta.layout)
     try {
         let layout = route.meta.layout
         let layoutComponent = await import(`@/views/layout/${layout}.vue`)

@@ -1,11 +1,8 @@
 import axios from 'axios'
-
-/* const instance = axios.create({
-    baseURL: ENV.APIREST_HPV1
-}) */
+//import
 
 const instance = axios.create({
-    baseURL: ENV.APIREST_HPV1,
+    baseURL: import.meta.env.VITE_API_V1,
     headers: {
         'Access-Control-Allow-Origin': '*'
     }
