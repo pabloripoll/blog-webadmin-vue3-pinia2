@@ -3,7 +3,6 @@ import { useUserStore } from '../../stores/user'
 
 const store = useUserStore()
 
-//console.log(store.user)
 </script>
 
 <template>

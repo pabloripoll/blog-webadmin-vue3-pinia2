@@ -78,3 +78,6 @@ repo-flush: ## clears local git repository cache specially to update .gitignore
 
 repo-commit: ## echoes common git commands
 	echo "git add . && git commit -m \"maint: ... \" && git push -u origin main"
+	echo ${C_YEL}"For fixing pushed commit comment:"${C_END}
+	echo "git commit --amend"
+	echo "git push --force origin main"
